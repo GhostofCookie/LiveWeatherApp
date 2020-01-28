@@ -1,0 +1,85 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+header.location {
+    width: 100vw;
+    margin: 0;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 2rem;
+    text-align: center;
+    
+    background: #1F1F1F;
+    color: #EEEEEE;
+}
+
+section.weather {
+    display: grid;
+    grid-template-areas: 
+        'current current'
+        'description description'
+        'wind humidity';
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: minmax(100px, auto);
+    
+    color: #EEEEEE;
+}
+
+section.weather > * {
+    padding: 10px;
+    text-align: center;
+}
+
+#current {
+    grid-area: current;
+    min-height: 55vh;
+    font-size: 5rem;
+    padding: 5vh;
+    
+    background: #3F3F3F;
+}
+
+#icon {
+    width: 50%;
+}
+
+#minmax {
+    grid-area: minmax;
+    padding: 5vh;
+    font-size: 1.5rem;
+}
+
+#sec-wind {
+    grid-area: wind;
+    
+    background: #2F2F2F;
+}
+
+#sec-humidity {
+    grid-area: humidity;
+    
+    background: #3A3A3A;
+}
+
+.unit {
+    font-size: 1rem;
+}
+
+#sec-wind, #sec-humidity {
+    min-height: 23vh;
+    font-size: 1.5rem;
+    padding: 7vh;
+}
+
+#description {
+    grid-area: description;
+    min-height: 7vh;
+    padding: 3vh;
+    
+    background: #525252;
+}
